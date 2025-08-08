@@ -1,5 +1,18 @@
--- Active: 1754653603662@@172.18.0.2@5432@meatDB
-INSERT INTO tb_restaurants (name, category, delivery_estimate, rating, image_path, about, hours)
+-- Active: 1754657429460@@172.17.0.3@5432@meatdb
+
+
+CREATE TABLE IF NOT EXISTS tb_restaurant(
+    id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
+    name varchar(255),
+    category varchar(255),
+    delivery_estimate varchar(255),
+    rating double precision,
+    image_path varchar(255),
+    about varchar(255),
+    hours varchar(255),
+    PRIMARY KEY(id)
+);
+INSERT INTO tb_restaurant (name, category, delivery_estimate, rating, image_path, about, hours)
 VALUES
   ('Bread & Bakery', 'Bakery', '25m', 4.9, 'assets/img/restaurants/breadbakery.png', 'A Bread & Brakery tem 40 anos de mercado. Fazemos os melhores doces e pães. Compre e confira.', 'Funciona de segunda à sexta, de 8h às 23h'),
   ('Burger House', 'Hamburgers', '100m', 3.5, 'assets/img/restaurants/burgerhouse.png', '40 anos se especializando em trash food.', 'Funciona todos os dias, de 10h às 22h'),
