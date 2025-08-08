@@ -1,0 +1,9 @@
+-- Active: 1754653603662@@172.18.0.2@5432@meatDB
+INSERT INTO tb_restaurants (name, category, delivery_estimate, rating, image_path, about, hours)
+VALUES
+  ('Bread & Bakery', 'Bakery', '25m', 4.9, 'assets/img/restaurants/breadbakery.png', 'A Bread & Brakery tem 40 anos de mercado. Fazemos os melhores doces e pães. Compre e confira.', 'Funciona de segunda à sexta, de 8h às 23h'),
+  ('Burger House', 'Hamburgers', '100m', 3.5, 'assets/img/restaurants/burgerhouse.png', '40 anos se especializando em trash food.', 'Funciona todos os dias, de 10h às 22h'),
+  ('Coffee Corner', 'Coffee Shop', '30-40m', 4.8, 'assets/img/restaurants/coffeecorner.png', 'A Coffee Corner foi eleita a melhor cafeteria da cidade.', 'Funciona de segunda à sábado, de 6h às 22h'),
+  ('Green Food', 'Saudável', '75m', 4.1, 'assets/img/restaurants/greenfood.png', 'Comida saudável é no Green Food. Compramos barato, vendemos caro. ;)', 'Somente em horário de almoço, das 11h às 15h'),
+  ('Ice Cream', 'Ice Creams', '40-65m', 4.5, 'assets/img/restaurants/icy.png', 'A Ice Cream é uma sorveteira inovadora.', 'Funciona todos os dias, de 10h às 1h'),
+  ('Tasty Treats', 'Doces', '20m', 4.4, 'assets/img/restaurants/tasty.png', 'A doceira com mais tradição da cidade', 'Funciona de segunda à sábado, de 8h às 23h');
