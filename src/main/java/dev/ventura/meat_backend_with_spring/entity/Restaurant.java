@@ -1,10 +1,10 @@
 package dev.ventura.meat_backend_with_spring.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,16 +12,22 @@ import jakarta.persistence.Table;
 public class Restaurant {
 
   @Id
-  @SequenceGenerator(name = "restaurant_sequence", sequenceName = "restaurant_sequence", allocationSize = 1)
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "restaurant_sequence")
-  public Long id;
-  public String name;
-  public String category;
-  public String deliveryEstimate;
-  public double rating;
-  public String imagePath;
-  public String about;
-  public String hours;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
+  private String name;
+  private String category;
+
+  @Column(name = "delivery_estimate")
+  private String deliveryEstimate;
+
+  private double rating;
+
+  @Column(name = "image_path")
+  private String imagePath;
+
+  private String about;
+  private String hours;
 
   public Restaurant() {
   }
