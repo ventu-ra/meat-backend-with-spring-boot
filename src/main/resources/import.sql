@@ -20,3 +20,6 @@ VALUES
   ('Green Food', 'Saudável', '75m', 4.1, 'assets/img/restaurants/greenfood.png', 'Comida saudável é no Green Food. Compramos barato, vendemos caro. ;)', 'Somente em horário de almoço, das 11h às 15h'),
   ('Ice Cream', 'Ice Creams', '40-65m', 4.5, 'assets/img/restaurants/icy.png', 'A Ice Cream é uma sorveteira inovadora.', 'Funciona todos os dias, de 10h às 1h'),
   ('Tasty Treats', 'Doces', '20m', 4.4, 'assets/img/restaurants/tasty.png', 'A doceira com mais tradição da cidade', 'Funciona de segunda à sábado, de 8h às 23h');
+
+
+SELECT * FROM tb_restaurant;
