@@ -3,6 +3,7 @@ package dev.ventura.meat_backend_with_spring.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import dev.ventura.meat_backend_with_spring.dto.RestaurantDTO;
 import dev.ventura.meat_backend_with_spring.entity.Restaurant;
 import dev.ventura.meat_backend_with_spring.service.RestaurantService;
 
@@ -25,7 +26,7 @@ public class RestaurantController {
   }
 
   @GetMapping
-  public ResponseEntity<List<Restaurant>> getRestaurants() {
+  public ResponseEntity<List<RestaurantDTO>> getRestaurants() {
     return ResponseEntity.ok(service.getRestaurants());
   }
 
