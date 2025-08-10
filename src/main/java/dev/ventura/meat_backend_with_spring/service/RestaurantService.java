@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import dev.ventura.meat_backend_with_spring.dto.RestaurantByIdDTO;
 import dev.ventura.meat_backend_with_spring.dto.RestaurantDTO;
-import dev.ventura.meat_backend_with_spring.entity.Restaurant;
+import dev.ventura.meat_backend_with_spring.model.Restaurant;
 import dev.ventura.meat_backend_with_spring.repository.RestaurantRepository;
 import jakarta.persistence.EntityNotFoundException;
 

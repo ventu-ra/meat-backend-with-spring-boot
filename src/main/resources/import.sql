@@ -25,7 +25,7 @@
 -- );
 
 INSERT INTO
-    tb_restaurant (
+    tb_restaurants (
         name,
         category,
         delivery_estimate,

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.ventura.meat_backend_with_spring.dto.RestaurantByIdDTO;
 import dev.ventura.meat_backend_with_spring.dto.RestaurantDTO;
-import dev.ventura.meat_backend_with_spring.entity.Restaurant;
+import dev.ventura.meat_backend_with_spring.model.Restaurant;
 import dev.ventura.meat_backend_with_spring.service.RestaurantService;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public class RestaurantController {
   }
 
   @GetMapping
-  public ResponseEntity<List<RestaurantDTO>> getRestaurants() {
+  public ResponseEntity<List<RestaurantDTO>> getAll() {
     return ResponseEntity.ok(service.getRestaurants());
   }
 
