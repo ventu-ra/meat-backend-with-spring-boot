@@ -40,8 +40,7 @@ public class RestaurantController {
 
   @GetMapping("/{id}")
   public ResponseEntity<RestaurantByIdDTO> getById(@PathVariable Long id) {
-    RestaurantByIdDTO restaurantByIdDTO = service.getByID(id);
-    return ResponseEntity.ok(restaurantByIdDTO);
+    return service.getByID(id).orElse(ResponseEntity.noContent().build());
   }
 
 }
