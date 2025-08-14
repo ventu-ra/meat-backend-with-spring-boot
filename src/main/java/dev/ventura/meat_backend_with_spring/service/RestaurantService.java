@@ -37,6 +37,6 @@ public class RestaurantService {
 
   public RestaurantByIdDTO getByID(Long id) {
     return repository.findById(id).stream().map(RestaurantByIdDTO::getByIdDto).findFirst()
-        .orElseThrow(() -> new NotFoundResourceException("Restaurante com ID " + id + "não encontrado!"));
+        .orElseThrow(() -> new NotFoundResourceException("Restaurante com ID " + id + " não encontrado!"));
   }
 }
