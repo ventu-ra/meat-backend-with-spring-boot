@@ -1,10 +1,14 @@
 package dev.ventura.meat_backend_with_spring.model;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,6 +32,9 @@ public class Restaurant {
 
   private String about;
   private String hours;
+
+  @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<Menu> menuItems;
 
   public Restaurant() {
   }
@@ -117,6 +124,14 @@ public class Restaurant {
 
   public void setHours(String hours) {
     this.hours = hours;
+  }
+
+  public List<Menu> getMenuItems() {
+    return menuItems;
+  }
+
+  public void setMenuItems(List<Menu> menuItems) {
+    this.menuItems = menuItems;
   }
 
 }
