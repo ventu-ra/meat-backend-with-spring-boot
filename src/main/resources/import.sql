@@ -92,3 +92,29 @@ VALUES (
 SELECT * FROM restaurant;
 
 INSERT INTO "tb_menus"("image_path","name","price","restaurant_id","description") VALUES('assets/img/foods/cupcake.png','Cup Cake',8.7,1,'Cup Cake recheado de Doce de Leite');
+
+INSERT INTO tb_menus (image_path, name, price, restaurant_id, description) VALUES
+('assets/img/foods/cupcake.png', 'Cup Cake', 8.7, 1, 'Cup Cake recheado de Doce de Leite'),
+('assets/img/foods/donut.png', 'Donut', 2.5, 1, 'Coberto com chantilly'),
+('assets/img/foods/bread.png', 'Pão Artesanal Italiano', 15.9, 1, 'Pão artesanal com queijos italianos'),
+
+('assets/img/foods/burger.png', 'Classic Burger', 18.5, 2, 'O clássico. Não tem como errar.'),
+('assets/img/foods/fries.png', 'Batatas Fritas', 5.5, 2, 'Batatas fritas crocantes'),
+('assets/img/foods/coke.png', 'Refrigerante', 4.5, 2, 'O refri mais gelado da cidade.'),
+
+('assets/img/foods/capp.png', 'Cappuccino com Chantilly', 9.9, 3, 'Tradicional cappuccino com chantilly'),
+('assets/img/foods/espreso.png', 'Super Espreso', 12.5, 3, 'Café espresso duplo. '),
+('assets/img/foods/starb.png', 'Starbucks Copycat', 15.6, 3, 'O mais pedido da casa. O verdadeiro café americano pura água.'),
+
+('assets/img/foods/zlasagna.png', 'Lasagna de Zucchini', 14.9, 4, 'Lasagna deliciosa que se salva por causa do queijo'),
+('assets/img/foods/greensandwich.png', 'Sanduíche de Frango', 10.5, 4, 'Frango grelhado e salada'),
+('assets/img/foods/ceasar.png', 'Salada Ceasar', 33.9, 4, 'Clássica salada ceasar.'),
+
+('assets/img/foods/sunday.png', 'Mega Sunday', 21.5, 5, 'Sunday com várias bolas de sorvete a sua escolha'),
+('assets/img/foods/chocpop.png', 'Picolé de Brigadeiro', 8.5, 5, 'Picolé de brigadeiro recheado com côco.'),
+('assets/img/foods/icestd.png', 'Sorvete Simples', 1.5, 5, 'Clássico sorvete de rua onde todos os sabores são idênticos.'),
+
+('assets/img/foods/cup.png', 'Cup Cake de Choc. Branco', 5.5, 6, 'Cup Cake de chocolate branco'),
+('assets/img/foods/straw.png', 'Bolo de Morango', 40.5, 6, 'Bolo recheado e coberto com morangos'),
+('assets/img/foods/cake.png', 'Fatia de Bolo', 5.9, 6, 'Fatia de bolo de morango');
+
