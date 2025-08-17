@@ -91,65 +91,339 @@ VALUES (
 
 SELECT * FROM restaurant;
 
-INSERT INTO "tb_menus"("image_path","name","price","restaurant_id","description") VALUES('assets/img/foods/cupcake.png','Cup Cake',8.7,1,'Cup Cake recheado de Doce de Leite');
+INSERT INTO
+    "tb_menus" (
+        "image_path",
+        "name",
+        "price",
+        "restaurant_id",
+        "description"
+    )
+VALUES (
+        'assets/img/foods/cupcake.png',
+        'Cup Cake',
+        8.7,
+        1,
+        'Cup Cake recheado de Doce de Leite'
+    );
 
-INSERT INTO tb_menus (image_path, name, price, restaurant_id, description) VALUES
-('assets/img/foods/cupcake.png', 'Cup Cake', 8.7, 1, 'Cup Cake recheado de Doce de Leite'),
-('assets/img/foods/donut.png', 'Donut', 2.5, 1, 'Coberto com chantilly'),
-('assets/img/foods/bread.png', 'Pão Artesanal Italiano', 15.9, 1, 'Pão artesanal com queijos italianos'),
+INSERT INTO
+    tb_menus (
+        image_path,
+        name,
+        price,
+        restaurant_id,
+        description
+    )
+VALUES (
+        'assets/img/foods/cupcake.png',
+        'Cup Cake',
+        8.7,
+        1,
+        'Cup Cake recheado de Doce de Leite'
+    ),
+    (
+        'assets/img/foods/donut.png',
+        'Donut',
+        2.5,
+        1,
+        'Coberto com chantilly'
+    ),
+    (
+        'assets/img/foods/bread.png',
+        'Pão Artesanal Italiano',
+        15.9,
+        1,
+        'Pão artesanal com queijos italianos'
+    ),
+    (
+        'assets/img/foods/burger.png',
+        'Classic Burger',
+        18.5,
+        2,
+        'O clássico. Não tem como errar.'
+    ),
+    (
+        'assets/img/foods/fries.png',
+        'Batatas Fritas',
+        5.5,
+        2,
+        'Batatas fritas crocantes'
+    ),
+    (
+        'assets/img/foods/coke.png',
+        'Refrigerante',
+        4.5,
+        2,
+        'O refri mais gelado da cidade.'
+    ),
+    (
+        'assets/img/foods/capp.png',
+        'Cappuccino com Chantilly',
+        9.9,
+        3,
+        'Tradicional cappuccino com chantilly'
+    ),
+    (
+        'assets/img/foods/espreso.png',
+        'Super Espreso',
+        12.5,
+        3,
+        'Café espresso duplo. '
+    ),
+    (
+        'assets/img/foods/starb.png',
+        'Starbucks Copycat',
+        15.6,
+        3,
+        'O mais pedido da casa. O verdadeiro café americano pura água.'
+    ),
+    (
+        'assets/img/foods/zlasagna.png',
+        'Lasagna de Zucchini',
+        14.9,
+        4,
+        'Lasagna deliciosa que se salva por causa do queijo'
+    ),
+    (
+        'assets/img/foods/greensandwich.png',
+        'Sanduíche de Frango',
+        10.5,
+        4,
+        'Frango grelhado e salada'
+    ),
+    (
+        'assets/img/foods/ceasar.png',
+        'Salada Ceasar',
+        33.9,
+        4,
+        'Clássica salada ceasar.'
+    ),
+    (
+        'assets/img/foods/sunday.png',
+        'Mega Sunday',
+        21.5,
+        5,
+        'Sunday com várias bolas de sorvete a sua escolha'
+    ),
+    (
+        'assets/img/foods/chocpop.png',
+        'Picolé de Brigadeiro',
+        8.5,
+        5,
+        'Picolé de brigadeiro recheado com côco.'
+    ),
+    (
+        'assets/img/foods/icestd.png',
+        'Sorvete Simples',
+        1.5,
+        5,
+        'Clássico sorvete de rua onde todos os sabores são idênticos.'
+    ),
+    (
+        'assets/img/foods/cup.png',
+        'Cup Cake de Choc. Branco',
+        5.5,
+        6,
+        'Cup Cake de chocolate branco'
+    ),
+    (
+        'assets/img/foods/straw.png',
+        'Bolo de Morango',
+        40.5,
+        6,
+        'Bolo recheado e coberto com morangos'
+    ),
+    (
+        'assets/img/foods/cake.png',
+        'Fatia de Bolo',
+        5.9,
+        6,
+        'Fatia de bolo de morango'
+    );
 
-('assets/img/foods/burger.png', 'Classic Burger', 18.5, 2, 'O clássico. Não tem como errar.'),
-('assets/img/foods/fries.png', 'Batatas Fritas', 5.5, 2, 'Batatas fritas crocantes'),
-('assets/img/foods/coke.png', 'Refrigerante', 4.5, 2, 'O refri mais gelado da cidade.'),
+INSERT INTO
+    tb_reviews (
+        name,
+        date,
+        rating,
+        comments,
+        restaurant_id
+    )
+VALUES (
+        'Julia',
+        '2017-01-23T18:25:43',
+        4.5,
+        'Tudo muito bom, entrega no tempo certo',
+        1
+    ),
+    (
+        'Aline',
+        '2016-12-12T18:25:43',
+        3.0,
+        'NÃO recomendo. O recheio é só um creme, não tem camarão e nem carne',
+        1
+    ),
+    (
+        'Renata',
+        '2016-12-12T18:25:43',
+        2.0,
+        'Não foi muito agradável ao nosso paladar, e eu e meu esposo no outro dia passamos super mal. Pode até ter sido outra coisa, mas...',
+        1
+    ),
+    (
+        'Renata',
+        '2016-12-12T18:25:43',
+        5.0,
+        'Nunca deixou na mão, comida sempre deliciosa.',
+        1
+    ),
+    (
+        'Daniela',
+        '2017-01-23T18:25:43',
+        4.0,
+        'Sanduíche muito bom! Já pedi diversas vezes sempre bom!',
+        2
+    ),
+    (
+        'Laila',
+        '2017-02-02T18:25:43',
+        5.0,
+        'Melhor hambúrguer que já provei. Vai ser difícil voltar para mc e bk',
+        2
+    ),
+    (
+        'Suzana',
+        '2016-12-12T18:25:43',
+        3.5,
+        'Meu sanduíche chegou frio e todo desmontado =\\',
+        2
+    ),
+    (
+        'Eric',
+        '2017-01-23T18:25:43',
+        4.5,
+        'Excelente opção! Recomendo!',
+        3
+    ),
+    (
+        'Amanda',
+        '2017-02-02T18:25:43',
+        2.5,
+        'Demorou muito e o café veio gelado',
+        3
+    ),
+    (
+        'Carla',
+        '2016-12-12T18:25:43',
+        4.8,
+        'Tudo perfeito. Entrega, embalagem, comida. Resultado? Melhor custo beneficio',
+        3
+    ),
+    (
+        'Rodrigo',
+        '2016-12-12T18:25:43',
+        4.0,
+        'Muito rápida a entrega, mas é caro.',
+        3
+    ),
+    (
+        'André',
+        '2016-12-12T18:25:43',
+        4.5,
+        'Excelente como sempre!',
+        3
+    ),
+    (
+        'João',
+        '2017-01-23T18:25:43',
+        5.0,
+        'Excelente. Fiz o pedido com outro endereço e quando vi o erro liguei avisando. O motoqueiro cortou a cidade todinha e a comida ainda chegou quentinha (e deliciosa). Estou sempre pedindo e recomendando',
+        4
+    ),
+    (
+        'Marcelo',
+        '2017-02-02T18:25:43',
+        4.5,
+        'Chegou muito rápido, antes mesmo da previsão',
+        4
+    ),
+    (
+        'Fatinha',
+        '2017-01-23T18:25:43',
+        2.0,
+        'Ñ gostei dos sabores q pedi e achei o preço muito elevado',
+        5
+    ),
+    (
+        'Lucas',
+        '2017-02-02T18:25:43',
+        2.5,
+        'Esperar 1:45hr pra receber o pedido é INACEITÁVEL',
+        5
+    ),
+    (
+        'Jacira',
+        '2017-02-01T18:25:43',
+        4.5,
+        'Veio OK!',
+        5
+    ),
+    (
+        'Ana',
+        '2017-01-23T18:25:43',
+        5.0,
+        'Rápido e sempre uma delicia!! Ja pedi 3x e sempre veio rapido e tudo certinho.',
+        6
+    ),
+    (
+        'Larissa',
+        '2017-02-02T18:25:43',
+        2.5,
+        'A taxa de entrega poderia ser mais barata.',
+        6
+    ),
+    (
+        'Jarbas',
+        '2016-12-15T18:25:43',
+        4.7,
+        'Excelente e chegou muito rápido!',
+        6
+    ),
+    (
+        'Rafaela',
+        '2017-01-12T18:25:43',
+        5.0,
+        'Chegou rápido e perfeito!',
+        6
+    ),
+    (
+        'Julia',
+        '2016-12-12T18:25:43',
+        1.5,
+        'Sempre gostei muito dos pedidos que eu fiz, mas dessa vez foi péssimo e decepcionou muito. Demorou 30min a mais pra chegar do que o tempo máximo esperado.',
+        6
+    ),
+    (
+        'Marília',
+        '2016-12-20T18:25:43',
+        4.5,
+        'Taxa de entrega bastante elevada e precisa colocar no app se a pessoa quer porção adicional de algo (calda, crocante etc)',
+        6
+    );
 
-('assets/img/foods/capp.png', 'Cappuccino com Chantilly', 9.9, 3, 'Tradicional cappuccino com chantilly'),
-('assets/img/foods/espreso.png', 'Super Espreso', 12.5, 3, 'Café espresso duplo. '),
-('assets/img/foods/starb.png', 'Starbucks Copycat', 15.6, 3, 'O mais pedido da casa. O verdadeiro café americano pura água.'),
-
-('assets/img/foods/zlasagna.png', 'Lasagna de Zucchini', 14.9, 4, 'Lasagna deliciosa que se salva por causa do queijo'),
-('assets/img/foods/greensandwich.png', 'Sanduíche de Frango', 10.5, 4, 'Frango grelhado e salada'),
-('assets/img/foods/ceasar.png', 'Salada Ceasar', 33.9, 4, 'Clássica salada ceasar.'),
-
-('assets/img/foods/sunday.png', 'Mega Sunday', 21.5, 5, 'Sunday com várias bolas de sorvete a sua escolha'),
-('assets/img/foods/chocpop.png', 'Picolé de Brigadeiro', 8.5, 5, 'Picolé de brigadeiro recheado com côco.'),
-('assets/img/foods/icestd.png', 'Sorvete Simples', 1.5, 5, 'Clássico sorvete de rua onde todos os sabores são idênticos.'),
-
-('assets/img/foods/cup.png', 'Cup Cake de Choc. Branco', 5.5, 6, 'Cup Cake de chocolate branco'),
-('assets/img/foods/straw.png', 'Bolo de Morango', 40.5, 6, 'Bolo recheado e coberto com morangos'),
-('assets/img/foods/cake.png', 'Fatia de Bolo', 5.9, 6, 'Fatia de bolo de morango');
-
-INSERT INTO tb_reviews (name, date, rating, comments, restaurant_id) VALUES
--- Restaurante 1
-('Julia', '2017-01-23T18:25:43', 4.5, 'Tudo muito bom, entrega no tempo certo', 1),
-('Aline', '2016-12-12T18:25:43', 3, 'NÃO recomendo. O recheio é só um creme, não tem camarão e nem carne', 1),
-('Renata', '2016-12-12T18:25:43', 2, 'Não foi muito agradável ao nosso paladar, e eu e meu esposo no outro dia passamos super mal. Pode até ter sido outra coisa, mas...', 1),
-('Renata', '2016-12-12T18:25:43', 5, 'Nunca deixou na mão, comida sempre deliciosa.', 1),
-
--- Restaurante 2
-('Daniela', '2017-01-23T18:25:43', 4, 'Sanduíche muito bom! Já pedi diversas vezes sempre bom!', 2),
-('Laila', '2017-02-02T18:25:43', 5, 'Melhor hambúrguer que já provei. Vai ser difícil voltar para mc e bk', 2),
-('Suzana', '2016-12-12T18:25:43', 3.5, 'Meu sanduíche chegou frio e todo desmontado =\\', 2),
-
--- Restaurante 3
-('Eric', '2017-01-23T18:25:43', 4.5, 'Excelente opção! Recomendo!', 3),
-('Amanda', '2017-02-02T18:25:43', 2.5, 'Demorou muito e o café veio gelado', 3),
-('Carla', '2016-12-12T18:25:43', 4.8, 'Tudo perfeito. Entrega, embalagem, comida. Resultado? Melhor custo beneficio', 3),
-('Rodrigo', '2016-12-12T18:25:43', 4, 'Muito rápida a entrega, mas é caro.', 3),
-('André', '2016-12-12T18:25:43', 4.5, 'Excelente como sempre!', 3),
-
--- Restaurante 4
-('João', '2017-01-23T18:25:43', 5, 'Excelente. Fiz o pedido com outro endereço e quando vi o erro liguei avisando. O motoqueiro cortou a cidade todinha e a comida ainda chegou quentinha (e deliciosa). Estou sempre pedindo e recomendando', 4),
-('Marcelo', '2017-02-02T18:25:43', 4.5, 'Chegou muito rápido, antes mesmo da previsão', 4),
-
--- Restaurante 5
-('Fatinha', '2017-01-23T18:25:43', 2, 'Ñ gostei dos sabores q pedi e achei o preço muito elevado', 5),
-('Lucas', '2017-02-02T18:25:43', 2.5, 'Esperar 1:45hr pra receber o pedido é INACEITÁVEL', 5),
-('Jacira', '2017-02-01T18:25:43', 4.5, 'Veio OK!', 5),
-
--- Restaurante 6
-('Ana', '2017-01-23T18:25:43', 5, 'Rápido e sempre uma delicia!! Ja pedi 3x e sempre veio rapido e tudo certinho.', 6),
-('Larissa', '2017-02-02T18:25:43', 2.5, 'A taxa de entrega poderia ser mais barata.', 6),
-('Jarbas', '2016-12-15T18:25:43', 4.7, 'Excelente e chegou muito rápido!', 6),
-('Rafaela', '2017-01-12T18:25:43', 5, 'Chegou rápido e perfeito!', 6),
-('Julia', '2016-12-12T18:25:43', 1.5, 'Sempre gostei muito dos pedidos que eu fiz, mas dessa vez foi péssimo e decepcionou muito. Demorou 30min a mais pra chegar do que o tempo máximo esperado.', 6),
-('Marília', '2016-12-20T18:25:43', 4.5, 'Taxa de entrega bastante elevada e precisa colocar no app se a pessoa quer porção adicional de algo (calda, crocante etc)', 6);
+INSERT INTO
+    tb_reviews (
+        name,
+        date,
+        rating,
+        comments,
+        restaurant_id
+    )
+VALUES (
+        'Julia',
+        '2017-01-23T18:25:43',
+        4.5,
+        'Tudo muito bom, entrega no tempo certo',
+        1
+    );
