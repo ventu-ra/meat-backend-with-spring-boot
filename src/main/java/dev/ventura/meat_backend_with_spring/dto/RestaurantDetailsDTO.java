@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import dev.ventura.meat_backend_with_spring.model.Restaurant;
+import dev.ventura.meat_backend_with_spring.model.Reviews;
 
 public record RestaurantDetailsDTO(
     Long id,
@@ -12,7 +13,8 @@ public record RestaurantDetailsDTO(
     double rating,
     String about,
     String imagePath,
-    List<MenuDTO> menuItens) {
+    List<MenuDTO> menuItens,
+    List<ReviewsDTO> reviews) {
 
   public static RestaurantDetailsDTO from(Restaurant restaurant) {
     return new RestaurantDetailsDTO(
@@ -24,7 +26,11 @@ public record RestaurantDetailsDTO(
         restaurant.getImagePath(),
         // Convertendo cada Menu em MenuDTO
         restaurant.getMenuItems().stream()
-            .map(MenuDTO::getMenuDTO)
+            .map(MenuDTO::from)
+            .collect(Collectors.toList()),
+
+        restaurant.getReviews().stream()
+            .map(ReviewsDTO::from)
             .collect(Collectors.toList()));
   }
 }

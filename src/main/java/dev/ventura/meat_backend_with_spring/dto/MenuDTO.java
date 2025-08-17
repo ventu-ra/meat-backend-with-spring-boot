@@ -7,7 +7,7 @@ public record MenuDTO(Long id,
     String description,
     double price,
     String imagePath) {
-  public static MenuDTO getMenuDTO(Menu menu) {
+  public static MenuDTO from(Menu menu) {
     return new MenuDTO(
         menu.getId(),
         menu.getName(),

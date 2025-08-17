@@ -36,6 +36,9 @@ public class Restaurant {
   @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Menu> menuItems;
 
+  @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
+  private List<Reviews> reviews;
+
   public Restaurant() {
   }
 
@@ -132,6 +135,14 @@ public class Restaurant {
 
   public void setMenuItems(List<Menu> menuItems) {
     this.menuItems = menuItems;
+  }
+
+  public List<Reviews> getReviews() {
+    return reviews;
+  }
+
+  public void setReviews(List<Reviews> reviews) {
+    this.reviews = reviews;
   }
 
 }
