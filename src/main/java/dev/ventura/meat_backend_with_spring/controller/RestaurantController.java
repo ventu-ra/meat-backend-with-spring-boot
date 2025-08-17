@@ -3,8 +3,8 @@ package dev.ventura.meat_backend_with_spring.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import dev.ventura.meat_backend_with_spring.dto.RestaurantByIdDTO;
 import dev.ventura.meat_backend_with_spring.dto.RestaurantDTO;
+import dev.ventura.meat_backend_with_spring.dto.RestaurantDetailsDTO;
 import dev.ventura.meat_backend_with_spring.model.Restaurant;
 import dev.ventura.meat_backend_with_spring.service.RestaurantService;
 
@@ -39,8 +39,8 @@ public class RestaurantController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<RestaurantByIdDTO> getById(@PathVariable Long id) {
-    return ResponseEntity.ok(service.getByID(id));
+  public ResponseEntity<RestaurantDetailsDTO> getRestaurantById(@PathVariable Long id) {
+    return ResponseEntity.ok(service.getRestaurantById(id));
   }
 
 }

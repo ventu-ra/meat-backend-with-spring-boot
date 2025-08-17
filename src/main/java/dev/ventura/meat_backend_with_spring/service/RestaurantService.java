@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import dev.ventura.meat_backend_with_spring.dto.RestaurantByIdDTO;
 import dev.ventura.meat_backend_with_spring.dto.RestaurantDTO;
+import dev.ventura.meat_backend_with_spring.dto.RestaurantDetailsDTO;
 import dev.ventura.meat_backend_with_spring.exceptions.NotFoundResourceException;
 import dev.ventura.meat_backend_with_spring.model.Restaurant;
 import dev.ventura.meat_backend_with_spring.repository.RestaurantRepository;
@@ -26,7 +26,7 @@ public class RestaurantService {
   public List<RestaurantDTO> getRestaurants() {
     return repository.findAll(PageRequest.of(0, 10))
         .stream()
-        .map(RestaurantDTO::getRestaurantDTO)
+        .map(RestaurantDTO::from)
         .collect(Collectors.toList());
   }
 
@@ -35,8 +35,8 @@ public class RestaurantService {
     return repository.save(restaurant);
   }
 
-  public RestaurantByIdDTO getByID(Long id) {
-    return repository.findById(id).stream().map(RestaurantByIdDTO::getByIdDto).findFirst()
+  public RestaurantDetailsDTO getRestaurantById(Long id) {
+    return repository.findById(id).stream().map(RestaurantDetailsDTO::from).findFirst()
         .orElseThrow(() -> new NotFoundResourceException("Restaurante com ID " + id + " não encontrado!"));
   }
 }
