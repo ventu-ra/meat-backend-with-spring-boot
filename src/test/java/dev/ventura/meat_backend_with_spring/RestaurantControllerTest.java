@@ -56,7 +56,7 @@ public class RestaurantControllerTest {
   void shouldReturnRestaurantById() {
     // Arrange
     RestaurantDetailsDTO detailsDTO = new RestaurantDetailsDTO(
-        1L, "Burger House", "Hamburgers", 4.5, "Sobre o restaurante", "img.png", List.of());
+        1L, "Burger House", "Hamburgers", 4.5, "Sobre o restaurante", "img.png", List.of(), List.of());
 
     when(service.getRestaurantById(1L)).thenReturn(detailsDTO);
 
